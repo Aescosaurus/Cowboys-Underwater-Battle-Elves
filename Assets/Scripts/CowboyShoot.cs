@@ -9,11 +9,9 @@ public class CowboyShoot
 {
     void Start()
     {
-        bullet = Utility.FindInScene( "PrefabHolder" )
-            .GetComponent<PrefabHolderScript>()
-            .playerBullet;
+        bullet = Utility.GetPrefabHolder().playerBullet;
 
-        bulletSpawnPos = transform.GetChild( 1 );
+        bulletSpawnPos = transform.GetChild( 0 );
     }
     void Update()
     {

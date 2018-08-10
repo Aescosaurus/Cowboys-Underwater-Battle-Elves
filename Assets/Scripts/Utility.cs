@@ -14,4 +14,9 @@ public class Utility
 
         return( matches[0] );
     }
+    public static PrefabHolderScript GetPrefabHolder()
+    {
+        return( FindInScene( "PrefabHolder" )
+            .GetComponent<PrefabHolderScript>() );
+    }
 }

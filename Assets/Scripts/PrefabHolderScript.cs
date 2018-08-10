@@ -7,4 +7,6 @@ public class PrefabHolderScript
     MonoBehaviour
 {
     [SerializeField] public GameObject playerBullet;
+    [SerializeField] public GameObject particle;
+    [SerializeField] public GameObject elf;
 }

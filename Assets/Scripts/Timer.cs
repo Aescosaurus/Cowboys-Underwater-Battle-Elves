@@ -12,6 +12,10 @@ public class Timer
     {
         if( cur <= max ) cur += Time.deltaTime;
     }
+    public void Update( float addAmount )
+    {
+        if( cur <= max ) cur += addAmount;
+    }
     public void Reset()
     {
         cur = 0.0f;
