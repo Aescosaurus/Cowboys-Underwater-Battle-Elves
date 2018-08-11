@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Particle.cs" />
      <Compile Include="Assets\Scripts\PrefabHolderScript.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\Scripts\Unlockable.cs" />
      <Compile Include="Assets\Scripts\Utility.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Aesc/Desktop/Cowboys Underwater Battle Elves/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

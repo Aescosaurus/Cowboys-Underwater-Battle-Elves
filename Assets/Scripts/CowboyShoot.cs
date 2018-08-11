@@ -26,10 +26,7 @@ public class CowboyShoot
 
             GameObject tBull = Instantiate( bullet );
 
-            Quaternion rot = transform.rotation;
             tBull.transform.position = bulletSpawnPos.position;
-
-            tBull.transform.rotation = transform.rotation;
 
             tBull.GetComponent<Rigidbody>()
                 .AddForce( transform.forward * bulletSpeed,
@@ -38,8 +35,9 @@ public class CowboyShoot
     }
     // 
     GameObject bullet;
-    const float bulletSpeed = 10.0f;
+    const float bulletSpeed = Bullet.speed;
     // Vector3 bullFireOffset = new Vector3( 3.5f,3.0f,3.5f );
     Transform bulletSpawnPos;
     Timer refire = new Timer( 0.2f );
+    const float accDev = 6.34f; // Degrees :(
 }

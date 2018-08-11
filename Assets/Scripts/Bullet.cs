@@ -29,4 +29,5 @@ public class Bullet
     // 
     Timer destTimer = new Timer( 1.0f );
     bool destroying = false;
+    public const float speed = 10.0f;
 }
