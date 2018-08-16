@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class Bullet
     :
@@ -8,26 +9,35 @@ public class Bullet
 {
     void Update()
     {
-        if( destroying ) destTimer.Update();
+        Assert.IsNotNull( destTimer );
+
+        // if( destroying )
+        {
+            destTimer.Update();
+        }
+
         if( destTimer.IsDone() )
         {
             Destroy( gameObject );
         }
     }
-    void OnBecameInvisible()
-    {
-        StartDestroy();
-    }
-    void OnCollisionEnter( Collision coll )
-    {
-        StartDestroy();
-    }
-    void StartDestroy()
-    {
-        destroying = true;
-    }
+    // Destroy even if not invisible.
+    // void OnBecameInvisible()
+    // {
+    //     StartDestroy();
+    // }
+    // void OnCollisionEnter( Collision coll )
+    // {
+    //     StartDestroy();
+    // }
+    // void StartDestroy()
+    // {
+    //     destroying = true;
+    // }
     // 
-    Timer destTimer = new Timer( 1.0f );
-    bool destroying = false;
-    public const float speed = 10.0f;
+    public Timer destTimer;
+    // bool destroying = false;
+
+    // public float speed = 10.0f;
+    public float damage;
 }

@@ -19,4 +19,9 @@ public class Utility
         return( FindInScene( "PrefabHolder" )
             .GetComponent<PrefabHolderScript>() );
     }
+    public static GunTypeHolder GetGunTypeHolder()
+    {
+        return( FindInScene( "GunStatsHolder" )
+            .GetComponent<GunTypeHolder>() );
+    }
 }

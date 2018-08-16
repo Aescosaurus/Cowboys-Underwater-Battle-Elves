@@ -14,11 +14,12 @@ public class Elf
     {
         if( coll.gameObject.tag == "Bullet" )
         {
+            // --hp;
+            hp -= coll.gameObject.GetComponent<Bullet>().damage;
+
             Destroy( coll.gameObject );
 
-            --hp;
-
-            if( hp < 1 )
+            if( hp < 1.0f )
             {
                 CreateParticles( Random.Range( 7,11 ) );
                 Destroy( gameObject );
@@ -38,7 +39,7 @@ public class Elf
         }
     }
     // 
-    int hp = 7;
+    float hp = 7.0f;
     GameObject part;
     Color myPartCol = new Color( 90.0f / 255.0f,
         197.0f / 255.0f,79.0f / 255.0f );

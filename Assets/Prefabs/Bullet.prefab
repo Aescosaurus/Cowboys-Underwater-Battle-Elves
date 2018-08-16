@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 54923403425682332}
   - component: {fileID: 65624991387982072}
   - component: {fileID: 114316582137474110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -124,3 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21f615728f424b49825c17adbd27c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1

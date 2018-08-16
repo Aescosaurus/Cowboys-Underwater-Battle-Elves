@@ -55,10 +55,15 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
-     <Compile Include="Assets\Scripts\CowboyMove.cs" />
-     <Compile Include="Assets\Scripts\CowboyShoot.cs" />
+     <Compile Include="Assets\Scripts\Cowboy\CowboyMove.cs" />
+     <Compile Include="Assets\Scripts\Cowboy\CowboyShoot.cs" />
+     <Compile Include="Assets\Scripts\Cowboy\CowboyWeaponSwap.cs" />
      <Compile Include="Assets\Scripts\Elf.cs" />
      <Compile Include="Assets\Scripts\ElfMove.cs" />
+     <Compile Include="Assets\Scripts\Guns\_GunBase.cs" />
+     <Compile Include="Assets\Scripts\Guns\Pistol.cs" />
+     <Compile Include="Assets\Scripts\GunScript.cs" />
+     <Compile Include="Assets\Scripts\GunTypeHolder.cs" />
      <Compile Include="Assets\Scripts\Igloo.cs" />
      <Compile Include="Assets\Scripts\Particle.cs" />
      <Compile Include="Assets\Scripts\PrefabHolderScript.cs" />

@@ -186,10 +186,13 @@
 -define:UNITY_POST_PROCESSING_STACK_V2
 Assets/Scripts/Bullet.cs
 Assets/Scripts/CameraMove.cs
-Assets/Scripts/CowboyMove.cs
-Assets/Scripts/CowboyShoot.cs
+Assets/Scripts/Cowboy/CowboyMove.cs
+Assets/Scripts/Cowboy/CowboyShoot.cs
+Assets/Scripts/Cowboy/CowboyWeaponSwap.cs
 Assets/Scripts/Elf.cs
 Assets/Scripts/ElfMove.cs
+Assets/Scripts/Guns/_GunBase.cs
+Assets/Scripts/Guns/Pistol.cs
 Assets/Scripts/Igloo.cs
 Assets/Scripts/Particle.cs
 Assets/Scripts/PrefabHolderScript.cs
