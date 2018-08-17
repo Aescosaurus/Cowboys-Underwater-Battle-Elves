@@ -22,6 +22,11 @@ public class Elf
             if( hp < 1.0f )
             {
                 CreateParticles( Random.Range( 7,11 ) );
+
+                Utility.FindInScene( "Cowboy" )
+                    .GetComponent<CowboyScore>()
+                    .AddScore( scoreAdd );
+
                 Destroy( gameObject );
             }
         }
@@ -43,4 +48,5 @@ public class Elf
     GameObject part;
     Color myPartCol = new Color( 90.0f / 255.0f,
         197.0f / 255.0f,79.0f / 255.0f );
+    const int scoreAdd = 1;
 }

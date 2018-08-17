@@ -9,6 +9,7 @@ TagManager:
   - Cowboy
   - Elf
   - GunStatsHolder
+  - NumberHolder
   layers:
   - Default
   - TransparentFX
