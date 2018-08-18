@@ -49,7 +49,7 @@ public class NumberDrawerScript
             // Copy, no ref pls.
             var tempPos = new Vector3( pos.x,pos.y,pos.z );
 
-            tempPos.z += i * moveAddMult;
+            tempPos.x += i * moveAddMult;
 
             activeNums[i].transform.position = tempPos;
         }

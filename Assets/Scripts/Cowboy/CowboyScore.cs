@@ -39,6 +39,19 @@ public class CowboyScore
         drawNumbers.AddNums( drawNumbers.SplitToList( score ),
             GetNumPos() );
     }
+    public void RemoveScore( int amount )
+    {
+        fading = true;
+
+        score -= amount;
+        drawNumbers.DestroyNums();
+        drawNumbers.AddNums( drawNumbers.SplitToList( score ),
+            GetNumPos() );
+    }
+    public int GetScore()
+    {
+        return( score );
+    }
     Vector3 GetNumPos()
     {
         var pos = transform.position;

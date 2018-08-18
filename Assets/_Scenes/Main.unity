@@ -1549,7 +1549,7 @@ MonoBehaviour:
   particle: {fileID: 1073465841751162, guid: 12ff3e26e69b6a84798fe10baa742836, type: 2}
   elf: {fileID: 1194444025750526, guid: cb5ed48e562753a4c8955c978cd1126c, type: 2}
   openFence: {fileID: 1484775595086954, guid: 24ffa16afa1ab6944a07927fd703da03, type: 2}
-  starterGun: {fileID: 1371371060962476, guid: 2fe695627e0d52d4aaed1c7e63ecee39, type: 2}
+  starterGun: {fileID: 1668341185348076, guid: 4ac6da0b34a6d50488a4d5e1a922762d, type: 2}
 --- !u!1001 &1437611499
 Prefab:
   m_ObjectHideFlags: 0

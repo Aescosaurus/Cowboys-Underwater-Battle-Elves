@@ -19,8 +19,10 @@ public class Elf
 
             Destroy( coll.gameObject );
 
-            if( hp < 1.0f )
+            if( hp < 1.0f && !deadAlready )
             {
+                deadAlready = true;
+
                 CreateParticles( Random.Range( 7,11 ) );
 
                 Utility.FindInScene( "Cowboy" )
@@ -49,4 +51,5 @@ public class Elf
     Color myPartCol = new Color( 90.0f / 255.0f,
         197.0f / 255.0f,79.0f / 255.0f );
     const int scoreAdd = 1;
+    bool deadAlready = false;
 }

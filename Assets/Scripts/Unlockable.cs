@@ -10,15 +10,16 @@ public class Unlockable
     void Start()
     {
         player = Utility.FindInScene( "Cowboy" );
+        playerScore = player.GetComponent<CowboyScore>();
+        Assert.IsNotNull( player );
+        Assert.IsNotNull( playerScore );
 
         unlockMsg = Instantiate( Utility.GetPrefabHolder().openFence );
         unlockMsg.transform.position = new Vector3( 999.9f,999.9f,999.9f );
+        Assert.IsNotNull( unlockMsg );
     }
     void Update()
     {
-        Assert.IsNotNull( player );
-        Assert.IsNotNull( unlockMsg );
-
         var vec = player.transform.position - transform.position;
         var lenSq = vec.sqrMagnitude;
 
@@ -28,8 +29,10 @@ public class Unlockable
             unlockMsg.transform.position = player
                 .transform.position + msgOffset;
 
-            if( Input.GetAxis( "Interact" ) > 0.0f )
+            if( Input.GetAxis( "Interact" ) > 0.0f &&
+                playerScore.GetScore() > pointsRequired )
             {
+                playerScore.RemoveScore( pointsRequired );
                 Destroy( unlockMsg );
                 Destroy( gameObject );
             }
@@ -42,6 +45,7 @@ public class Unlockable
     // 
     [SerializeField] int pointsRequired;
     GameObject player;
+    CowboyScore playerScore;
     GameObject unlockMsg;
     Vector3 msgOffset = new Vector3( 0.0f,0.72f,0.0f );
     const float unlockRange = 8.1f;

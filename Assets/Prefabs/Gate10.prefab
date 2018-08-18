@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4485318882404612}
   - component: {fileID: 33881335085557588}
   - component: {fileID: 23356894091056858}
-  - component: {fileID: 114525625138385972}
   - component: {fileID: 65513753174591236}
+  - component: {fileID: 114525625138385972}
   m_Layer: 0
   m_Name: Gate10
   m_TagString: Untagged
@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da66e4c37313544da022d4090ff62f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsRequired: 0
+  pointsRequired: 10
