@@ -30,8 +30,11 @@ public class Unlockable
                 .transform.position + msgOffset;
 
             if( Input.GetAxis( "Interact" ) > 0.0f &&
-                playerScore.GetScore() > pointsRequired )
+                playerScore.GetScore() >= pointsRequired &&
+                canDestroy )
             {
+                canDestroy = false;
+
                 playerScore.RemoveScore( pointsRequired );
                 Destroy( unlockMsg );
                 Destroy( gameObject );
@@ -42,6 +45,10 @@ public class Unlockable
             unlockMsg.transform.position = new Vector3( 999.9f,999.9f,999.9f );
         }
     }
+    void LateUpdate()
+    {
+        canDestroy = true;
+    }
     // 
     [SerializeField] int pointsRequired;
     GameObject player;
@@ -50,4 +57,5 @@ public class Unlockable
     Vector3 msgOffset = new Vector3( 0.0f,0.72f,0.0f );
     const float unlockRange = 8.1f;
     const float rangeSq = unlockRange * unlockRange;
+    static bool canDestroy = false;
 }

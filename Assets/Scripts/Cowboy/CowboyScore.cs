@@ -33,6 +33,7 @@ public class CowboyScore
     public void AddScore( int amount )
     {
         fading = true;
+        scoreStayTimer.Reset();
 
         score += amount;
         drawNumbers.DestroyNums();
@@ -42,6 +43,7 @@ public class CowboyScore
     public void RemoveScore( int amount )
     {
         fading = true;
+        scoreStayTimer.Reset();
 
         score -= amount;
         drawNumbers.DestroyNums();
