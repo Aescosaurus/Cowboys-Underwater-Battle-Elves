@@ -10,5 +10,6 @@ public class PrefabHolderScript
     [SerializeField] public GameObject particle;
     [SerializeField] public GameObject elf;
     [SerializeField] public GameObject openFence;
+    [SerializeField] public GameObject purchaseWeapon;
     [SerializeField] public GameObject starterGun;
 }

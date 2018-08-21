@@ -52,6 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4450667112999934}
   - component: {fileID: 114121273584606150}
+  - component: {fileID: 114330294030246258}
   m_Layer: 0
   m_Name: Shotgun Gun
   m_TagString: Untagged
@@ -154,3 +155,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myType: 1
+--- !u!114 &114330294030246258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1668341185348076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61585af19a1069545a66f27ac8ad107b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsRequired: 5

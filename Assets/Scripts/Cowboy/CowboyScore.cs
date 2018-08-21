@@ -17,6 +17,11 @@ public class CowboyScore
     }
     void Update()
     {
+        if( Input.GetKey( KeyCode.P ) )
+        {
+            ++score;
+        }
+
         if( fading ) scoreStayTimer.Update();
 
         if( scoreStayTimer.IsDone() )

@@ -18,10 +18,8 @@ public class CowboyShoot
 
         curGun = Instantiate( Utility.GetPrefabHolder()
             .starterGun );
-        curGunScr = curGun.GetComponent<GunScript>();
-        curGunStats = gunTypes.GetStats( curGunScr.myType );
 
-        refire = new Timer( curGunStats.reloadTime );
+        ResetGunStuff();
 
         Assert.IsNotNull( bullet );
         Assert.IsNotNull( gunTypes );
@@ -49,6 +47,11 @@ public class CowboyShoot
                 bPos.position = curGun.transform
                     .GetChild( 1 ).position;
 
+                // var tempPos = bPos.position;
+                // tempPos.y = 0.8f;
+                // // tempPos.y = curGun.transform.localPosition.y;
+                // bPos.position = tempPos;
+
                 bPos.rotation = transform.rotation;
                 var dev = curGunStats.spread;
                 // Rotation for x, y, z axes.
@@ -67,13 +70,28 @@ public class CowboyShoot
         curGun.transform.rotation = transform.rotation;
         curGun.transform.Rotate( Vector3.up,90.0f );
     }
+    public void GiveGun( GameObject newGun )
+    {
+        Destroy( curGun );
+        curGun = newGun;
+
+        ResetGunStuff();
+    }
+    void ResetGunStuff()
+    {
+        var scr = curGun.GetComponent<Pickupable>();
+        if( scr != null ) scr.enabled = false;
+        curGunScr = curGun.GetComponent<GunScript>();
+        curGunStats = gunTypes.GetStats( curGunScr.myType );
+        refire = new Timer( curGunStats.reloadTime );
+    }
     // 
     GameObject bullet;
     // const float bulletSpeed = Bullet.speed;
     // Vector3 bullFireOffset = new Vector3( 3.5f,3.0f,3.5f );
     // Transform bulletSpawnPos;
     Timer refire;
-    const float accDev = 6.34f; // Degrees :(
+    // const float accDev = 6.34f; // Degrees :(
     GunTypeHolder gunTypes;
     GameObject curGun;
     GunScript curGunScr;

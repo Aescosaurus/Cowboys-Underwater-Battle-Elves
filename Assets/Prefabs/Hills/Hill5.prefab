@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4285026334909052}
   - component: {fileID: 33992566385489432}
   - component: {fileID: 23911117099093820}
+  - component: {fileID: 64110606042188156}
   m_Layer: 0
   m_Name: Hill5
   m_TagString: Untagged
@@ -82,4 +83,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802981907567624}
+  m_Mesh: {fileID: 4300000, guid: 16d813fef2d55224e9662a1d96974d91, type: 3}
+--- !u!64 &64110606042188156
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802981907567624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 16d813fef2d55224e9662a1d96974d91, type: 3}

@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Igloo.cs" />
      <Compile Include="Assets\Scripts\NumberDrawerScript.cs" />
      <Compile Include="Assets\Scripts\Particle.cs" />
+     <Compile Include="Assets\Scripts\Pickupable.cs" />
      <Compile Include="Assets\Scripts\PrefabHolderScript.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Unlockable.cs" />
